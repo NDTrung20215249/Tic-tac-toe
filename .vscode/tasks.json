@@ -1,0 +1,34 @@
+// .vscode/tasks.json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build WebSocket Server (GCC/vcpkg)",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "e:/Code/sever.c",
+                "-o",
+                "e:/Code/output/sever.exe",
+                "-L",
+                "C:/msys64/mingw64/lib",
+                "-lwebsockets"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}

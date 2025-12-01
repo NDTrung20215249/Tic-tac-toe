@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe Online</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="auth" class="panel">
+      <h2>Login / Register</h2>
+      <input id="username" placeholder="username" />
+      <input id="password" type="password" placeholder="password" />
+      <div class="row">
+        <button id="btnRegister">Register</button>
+        <button id="btnLogin">Login</button>
+      </div>
+    </div>
+
+    <div id="lobby" class="panel hidden">
+      <div class="row">
+        <div><strong>Logged in as:</strong> <span id="me"></span></div>
+        <div><strong>ELO:</strong> <span id="myelo"></span></div>
+      </div>
+      <div class="row">
+        <button id="btnFindMatch">Find Multiplayer Match</button>
+        <button id="btnPlayAI">Play vs AI</button>
+      </div>
+      <h3>Online Players</h3>
+      <ul id="onlineList"></ul>
+      <h3>Recent Games</h3>
+      <ul id="gamesList"></ul>
+    </div>
+
+    <div id="game" class="panel hidden">
+      <h3>Game vs <span id="oppName"></span> (10x10 - First 5 in a row wins)</h3>
+      <div id="board" class="board"></div>
+      <div class="row">
+        <button id="btnResign">Resign</button>
+        <button id="btnProposeDraw">Propose Draw</button>
+        <button id="btnReplay">Request Replay</button>
+      </div>
+      <pre id="gameLog"></pre>
+    </div>
+  </div>
+
+  <script src="/client.js"></script>
+</body>
+</html>
